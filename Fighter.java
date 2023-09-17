@@ -1,0 +1,65 @@
+
+
+public class Fighter extends Goat {
+
+    public Fighter(String name) {
+        super(name);
+        super.currentHP= 150;
+        super.maximumHP= 150;
+    } 
+
+    public void takeDamage (Attack attack) {
+        int amountODamage=0;
+        for(int x=0; attack.getNumberOhits().length>x; x++) {
+            amountODamage= amountODamage+attack.getNumberOhits()[x];
+        }
+        if(currentHP-amountODamage*1.25<0 || currentHP-amountODamage*0.75<0) {
+            currentHP= 0;
+        } else {
+            if(attack.getDamageType().equals(Attack.DamageType.PHYSICAL)) {
+                currentHP-= amountODamage*0.75;
+            } else if (attack.getDamageType().equals(Attack.DamageType.MAGICAL)){ 
+                currentHP-= amountODamage*1.25;
+            }
+            else {
+                currentHP-= amountODamage*1.0;
+            }
+        }
+    }
+
+    public void attackFighter(Fighter target) {
+        Attack attack= new Attack ("Cleave", new int[] {25}, Attack.DamageType.PHYSICAL);
+        target.takeDamage(attack);
+    }
+
+    public void attackMage(Mage target) {
+        Attack attack= new Attack ("Cleave", new int[] {25}, Attack.DamageType.PHYSICAL);
+        target.takeDamage(attack);
+    }
+
+    @Override
+    public String toString() {
+        return ("The character is named: "+name+"\n"+"Their current HP is: "+currentHP+"\n"+"Their max HP is: "
+        +maximumHP);
+    }
+
+    public static void main(String[] args) {
+
+        /* 
+        Fighter GaryBusterHolmes= new Fighter("Gary Buster Holmes");
+        Fighter KazumaKiryu= new Fighter("Kazuma Kiryu");
+
+        System.out.println(KazumaKiryu.toString());
+        System.out.println(" ");
+        System.out.println(GaryBusterHolmes.toString());
+        System.out.println(" ");
+
+        KazumaKiryu.attackFighter(GaryBusterHolmes);
+        GaryBusterHolmes.attackFighter(KazumaKiryu);
+
+        System.out.println(KazumaKiryu.toString());
+        System.out.println(" ");
+        System.out.println(GaryBusterHolmes.toString());
+        */
+    }
+}
