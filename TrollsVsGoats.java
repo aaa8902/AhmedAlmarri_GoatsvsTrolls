@@ -1,4 +1,3 @@
-// package Unit3.gvt;
 
 public class TrollsVsGoats {
     

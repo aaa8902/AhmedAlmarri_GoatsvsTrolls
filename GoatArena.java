@@ -1,7 +1,7 @@
 
 
 public class GoatArena {
-    public static void battle(Fighter fighter, Mage mage) {
+    public static void MagevsFighter(Fighter fighter, Mage mage) {
         
         while(fighter.isConscious()==true && fighter.isConscious()==true && 
         fighter.getCurrentHP()>0 && mage.getCurrentHP()>0) 
@@ -71,53 +71,16 @@ public class GoatArena {
     }
 
     public static void main(String[] args) {
-        
         Fighter GaryBusterHolmes= new Fighter("Gary Buster Holmes");
+        Fighter KazumaKiryu= new Fighter("Kazuma Kiryu");
         Mage Gandalf= new Mage("Gandalf");
-        battle(GaryBusterHolmes, Gandalf);
-        
+        Mage Ranni= new Mage("Ranni");
         Mage HarryPotter= new Mage("Harry Potter");
         Mage Tendo= new Mage("Tendo");
+        
+        MagevsFighter(GaryBusterHolmes, Gandalf);
         battleMages(HarryPotter, Tendo);
-
-        Fighter KazumaKiryu= new Fighter("Kazuma Kiryu");
         battleFighters(GaryBusterHolmes, KazumaKiryu);
+        battleMages(Ranni, Tendo);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* public static boolean battle(Mage goat1, Mage goat2){
-        return true;
-    }
-
-    public static boolean battle(Fighter goat1, Fighter goat2) {
-        return true;
-    } */

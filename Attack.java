@@ -1,4 +1,3 @@
-// package Unit3.gvt;
 
 public class Attack {
 
@@ -36,19 +35,5 @@ public class Attack {
     public String toString() {
         return ("The figher's attack name is: "+attackName+"\n"+"The number of hits are: "+numberOhits+"\n"
         +"The fighter's damage type is: "+damagetype);
-    }
-
-   /*  public void takeDamage (Attack attack) {
-        
-    } */
-
-    public static void main(String[] args) {
-        int[] GBattack= {69,69,69,69,69};
-        Attack GBHolmes= new Attack("FINISH NE", GBattack, Attack.DamageType.PHYSICAL);
-        for (int attacks: GBHolmes.getNumberOhits()){
-            System.out.println("Hits: "+attacks);
-        }
-        System.out.println(GBHolmes.getDamageType());
-
     }
 }

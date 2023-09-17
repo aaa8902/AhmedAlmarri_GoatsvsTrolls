@@ -1,4 +1,6 @@
-
+/* This is the parent class where the child classes: Mage and Fighter; share the same attributes here.
+ * @Author: Ahmed Adel Almari
+ */
 
 public class Goat {
     protected String name;

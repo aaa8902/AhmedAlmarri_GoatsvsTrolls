@@ -1,5 +1,4 @@
 
-
 public class Fighter extends Goat {
 
     public Fighter(String name) {
@@ -41,25 +40,5 @@ public class Fighter extends Goat {
     public String toString() {
         return ("The character is named: "+name+"\n"+"Their current HP is: "+currentHP+"\n"+"Their max HP is: "
         +maximumHP);
-    }
-
-    public static void main(String[] args) {
-
-        /* 
-        Fighter GaryBusterHolmes= new Fighter("Gary Buster Holmes");
-        Fighter KazumaKiryu= new Fighter("Kazuma Kiryu");
-
-        System.out.println(KazumaKiryu.toString());
-        System.out.println(" ");
-        System.out.println(GaryBusterHolmes.toString());
-        System.out.println(" ");
-
-        KazumaKiryu.attackFighter(GaryBusterHolmes);
-        GaryBusterHolmes.attackFighter(KazumaKiryu);
-
-        System.out.println(KazumaKiryu.toString());
-        System.out.println(" ");
-        System.out.println(GaryBusterHolmes.toString());
-        */
     }
 }

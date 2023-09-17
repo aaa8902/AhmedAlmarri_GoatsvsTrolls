@@ -1,5 +1,4 @@
 
-
 public class Mage extends Goat {
 
     public Mage(String name) {   
@@ -38,24 +37,5 @@ public class Mage extends Goat {
     public String toString() {
         return ("The character is named: "+name+"\n"+"Their current HP is: "+currentHP+"\n"+"Their max HP is: "
         +maximumHP);
-    }
-
-    public static void main(String[] args) {
-       
-        Mage Ranni= new Mage("Ranni");
-        Mage Gandalf= new Mage("Gandalf");
-
-        System.out.println(Ranni.toString());
-        System.out.println(" ");
-        System.out.println(Gandalf.toString());
-        System.out.println(" ");
-
-        Ranni.attackMage(Gandalf);
-        Gandalf.attackMage(Ranni);
-
-        System.out.println(Gandalf.toString());
-        System.out.println(" ");
-        System.out.println(Ranni.toString()); 
-
     }
 }
